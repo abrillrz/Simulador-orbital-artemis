@@ -1,4 +1,4 @@
-#include <math.h>        /* Para pow() (potencias) */
+#include <math.h>        
 #include "propulsion.h"  /* Nuestras constantes, el enum y los prototipos */
 
 /* ===== Problema D: desviacion lateral =====

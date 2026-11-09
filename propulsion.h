@@ -1,7 +1,7 @@
 #ifndef PROPULSION_H
 #define PROPULSION_H
 
-#include "orbita.h"   /* Reutilizamos constantes y tipos del modulo de orbita */
+/* #include "orbita.h"   // TODO: activar al integrar (lo usara la aceleracion centripeta) */
 
 /* ===== Valores del evento de propulsor lateral (consigna, Problema D) ===== */
 #define PULSO_ACELERACION   0.50   /* a lateral [m/s^2] */
