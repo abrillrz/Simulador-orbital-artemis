@@ -10,7 +10,8 @@ Gisela Mabel SOLOAGA
 Pilar Agostina VARGAS
 Comisión
 
-Comisión [N°]. Grupo Nro [N°].
+Comisión C 
+Grupo "The Girls"
 
 Video del sistema implementado
 
