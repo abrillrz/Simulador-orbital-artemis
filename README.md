@@ -99,9 +99,15 @@ gcc -Wall -Wextra -pedantic -std=c99 main.c simulador.c validaciones.c -o simula
 > `-lm` enlaza la librería matemática (`<math.h>`), necesaria para `sqrt` y `atan`.
 
 ### Ejecución
+# Linux / macOS
+
 ```bash
-./simulador_artemis          # Linux / macOS
-simulador_artemis.exe        # Windows
+./simulador_artemis          
+```
+# Windows
+
+```bash
+simulador_artemis.exe        
 ```
 
 ---
