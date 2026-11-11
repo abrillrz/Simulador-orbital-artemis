@@ -7,7 +7,8 @@
 
 #define TAM_BUFFER 64
 
-/* Lee una linea. Devuelve 1 si ok, 0 si fin de entrada, -1 si fue demasiado larga. */
+/* Lee una línea de la entrada. Retorna 1 si la lectura fue exitosa,
+   0 si se llegó al fin de la entrada y -1 si la línea excede el tamaño permitido. */
 static int leer_linea(char *buf, size_t tam)
 {
     if (fgets(buf, tam, stdin) == NULL) {
@@ -18,7 +19,7 @@ static int leer_linea(char *buf, size_t tam)
         buf[len - 1] = '\0';
         return 1;
     }
-    /* No habia salto de linea: la linea no entro en el buffer. Limpiamos el resto. */
+   /* Sin salto de línea: línea demasiado larga. Descartamos el resto. */
     int c;
     while ((c = getchar()) != '\n' && c != EOF) { }
     return -1;
