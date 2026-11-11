@@ -1,22 +1,34 @@
+# Makefile - Simulador de Misiones Artemis (Escenario 2: Orbita LEO)
+# Uso:
+#   make          -> compila el programa
+#   make run      -> compila y ejecuta
+#   make clean    -> borra los archivos generados
+
 CC      = gcc
-CFLAGS  = -std=c99 -Wall -Wextra -pedantic
+CFLAGS  = -Wall -Wextra -pedantic -std=c99
 LDLIBS  = -lm
+TARGET  = simulador_artemis
+OBJS    = main.o simulador.o validaciones.o
 
-all: orbita_demo test_orbita
+all: $(TARGET)
 
-orbita_demo: main_orbita.o orbita.o validaciones.o
-	$(CC) $^ -o $@ $(LDLIBS)
+$(TARGET): $(OBJS)
+	$(CC) $(CFLAGS) -o $@ $(OBJS) $(LDLIBS)
 
-test_orbita: test_orbita.o orbita.o
-	$(CC) $^ -o $@ $(LDLIBS)
+# Cada .o se recompila si cambia su .c o alguno de los encabezados
+main.o: main.c simulador.h validaciones.h
+	$(CC) $(CFLAGS) -c main.c
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+simulador.o: simulador.c simulador.h
+	$(CC) $(CFLAGS) -c simulador.c
 
-test: test_orbita
-	./test_orbita
+validaciones.o: validaciones.c validaciones.h
+	$(CC) $(CFLAGS) -c validaciones.c
+
+run: $(TARGET)
+	./$(TARGET)
 
 clean:
-	rm -f *.o orbita_demo test_orbita
+	rm -f $(OBJS) $(TARGET) $(TARGET).exe
 
-.PHONY: all test clean
+.PHONY: all run clean

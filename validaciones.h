@@ -1,11 +1,18 @@
 #ifndef VALIDACIONES_H
 #define VALIDACIONES_H
 
-/* Todas devuelven 1 si se leyó un valor válido, 0 si se cerró la entrada (EOF).
-   Repiten la consulta hasta que el dato sea válido (tipo y rango). */
-int  leer_double_rango(const char *mensaje, double min, double max, double *valor);
-int  leer_entero_rango(const char *mensaje, long min, long max, long *valor);
-void mostrar_error(const char *mensaje);
-void pausar(void);
+/* Solicita un entero dentro del rango [min, max].
+   Vuelve a preguntar hasta que el valor ingresado sea válido. */
+int leer_entero(const char *mensaje, int min, int max);
+
+/* Pide al usuario un real entre min y max (inclusive).
+   Insiste mientras la entrada no sea correcta. */
+double leer_decimal(const char *mensaje, double min, double max);
+
+/* Pide una opcion de menu entre min y max. */
+int leer_opcion_menu(int min, int max);
+
+/* Muestra un mensaje de advertencia uniforme. */
+void mostrar_advertencia(const char *texto);
 
 #endif
