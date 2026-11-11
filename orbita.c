@@ -6,7 +6,7 @@ double calcular_radio_orbital(double altitud) {
     return R_TIERRA + altitud;
 }
 
-/* Problema A: F_g = F_c  =>  G M m / r² = m v² / r  =>  v = sqrt(G M / r) */
+/* Problema A: F_g = F_c  => G M m / r² = m v² / r  =>  v = sqrt(G M / r) */
 double calcular_velocidad_orbital(double radio) {
     return sqrt(G_CONST * M_TIERRA / radio);
 }
