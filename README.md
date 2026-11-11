@@ -56,6 +56,19 @@ Para compilar y ejecutar este proyecto, es necesario tener instalado el compilad
     En Linux / Mac:
     ```bash
    ./simulador_artemis
-
+    ```
    En Windows:
+   ```bash
    simulador_artemis.exe
+   ```
+
+   ## 🤖 Registro de Uso de Inteligencia Artificial
+De acuerdo con lo solicitado por la cátedra, declaramos el uso de herramientas de IA generativa como apoyo al aprendizaje y al desarrollo del proyecto:
+
+*   **Herramientas utilizadas:** ChatGPT (OpenAI) / Claude (Anthropic). *(Pongan la que hayan usado)*.
+*   **Tareas específicas:** 
+    *   Consultas sobre la sintaxis de punteros en C para actualizar los `structs`.
+    *   Ayuda para estructurar la fórmula del Movimiento Circular Uniforme (MCU) en el código.
+    *   Depuración de errores del compilador GCC.
+*   **Prompts realizados:** *"¿Cómo crear un arreglo de structs para guardar un historial en C?"*, *"¿Cómo calcular el ángulo de una órbita usando la velocidad angular?"*.
+*   **Validación y adaptación:** Todo el código sugerido por la IA fue revisado, comprendido y adaptado por las integrantes del grupo. Ajustamos las variables a nuestro propio diseño de `structs` y comprobamos que las fórmulas físicas coincidieran con los datos exactos dados en la consigna de la cátedra.
