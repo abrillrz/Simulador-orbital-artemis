@@ -1,31 +1,60 @@
-Simulador de Misiones Artemis — Escenario 2: Órbita Terrestre Baja (LEO)
+# 🚀 Simulador de Misiones Artemis — Escenario 2: Órbita Terrestre Baja (LEO)
 
-Trabajo Final Integrador - Lenguaje C - Algoritmos y Estructuras de Datos Universidad Tecnológica Nacional - Facultad Regional Resistencia
+**Trabajo Final Integrador - Lenguaje C**
+*Universidad Tecnológica Nacional - Facultad Regional Resistencia*
+*Cátedra: Algoritmos y Estructuras de Datos | Ingeniería en Sistemas de Información*
 
-Integrantes del grupo
-Abril Nahir LORINCZ
-Larisa Selene OCAMPO
-Brisa Alanis RODRIGUEZ
-Gisela Mabel SOLOAGA
-Pilar Agostina VARGAS
-Comisión
+---
 
-Comisión C 
-Grupo "The Girls"
+## 👥 Integrantes y Comisión
+*   **Comisión:** C
+*   **Grupo:** "The Girls"
+*   **Integrantes:**
+    *   Abril Nahir LORINCZ
+    *   Larisa Selene OCAMPO
+    *   Brisa Alanis RODRIGUEZ
+    *   Gisela Mabel SOLOAGA
+    *   Pilar Agostina VARGAS
 
-Video del sistema implementado
+🔗 **Video de presentación:** [Enlace al video en YouTube/Drive/Loom - *Pendiente de subir*]
 
-[Enlace al video — pendiente de subir a YouTube / Drive / Loom]
+---
 
-Descripción del escenario Artemis
+## 🌌 Descripción del Escenario Artemis y Reglas del Juego
+Este proyecto simula la **Situación-Problema 2** de la misión Artemis: la inserción y estabilidad de la nave Orion en una Órbita Terrestre Baja (LEO). 
 
-Este proyecto simula la Situación-Problema 2 de la misión Artemis: la inserción y estabilidad de la nave Orion en una Órbita Terrestre Baja (LEO).
+Tras apagar sus motores de ascenso, la nave es inyectada en una órbita a **192 km de altitud**, describiendo un Movimiento Circular Uniforme (MCU). El simulador permite calcular y responder a las preguntas de análisis del escenario:
+*   **(a) Velocidad orbital (v):** Calculada igualando la fuerza gravitatoria con la centrípeta.
+*   **(b) Período orbital (T):** Tiempo que tarda en dar una vuelta completa (en segundos y minutos).
+*   **(c) Aceleración centrípeta (a):** Aceleración que experimentan los astronautas a esa altitud.
+*   **(d) Pulso de propulsor lateral:** Simulación de un encendido auxiliar perpendicular a la órbita, calculando la desviación lateral y su efecto en la trayectoria.
 
-Tras apagar sus motores de ascenso, la nave Orion es inyectada en una órbita baja de estacionamiento, donde describe un Movimiento Circular Uniforme (MCU) a una altitud constante de 192 km sobre la superficie terrestre. En ese estado, la fuerza de atracción gravitatoria de la Tierra actúa como la fuerza centrípeta que mantiene a la nave en órbita.
+**Reglas del Simulador:**
+El usuario interactúa mediante un menú por consola. A medida que avanza la simulación (por turnos o eventos), se registran los cambios en la nave (ángulo, vueltas, tiempo). Al finalizar, el sistema genera un reporte detallado con el historial de eventos y el desempeño final de la misión.
 
-A partir de los datos que ingresa el usuario, el simulador calcula y responde las preguntas de análisis del escenario:
+---
 
-(a) Velocidad orbital (v): módulo de la velocidad necesaria para mantener la órbita circular, obtenida al igualar la fuerza gravitatoria con la fuerza centrípeta.
-(b) Período orbital (T): tiempo que tarda la nave en completar una vuelta alrededor de la Tierra, expresado en segundos y minutos.
-(c) Aceleración centrípeta (a): módulo de la aceleración que experimentan los astronautas dentro de la cápsula a esa altitud.
-(d) Pulso de propulsor lateral: simula el encendido de un propulsor auxiliar que genera un pulso de aceleración constante y perpendicular a la velocidad orbital durante un intervalo de tiempo; calcula la desviación lateral resultante y describe cómo ese evento afecta la trayectoria y el estado de la misión.
+## ⚙️ Detalle de Funcionamiento (Arquitectura del Software)
+El código está diseñado bajo una estricta **modularización** (sin archivos monobloque), dividiendo las responsabilidades de la siguiente manera:
+
+*   **`main.c`**: Contiene la función `main()`, el menú principal de navegación y la inicialización del flujo del programa.
+*   **`simulador.h` / `simulador.c`**: Declaración y definición de la lógica de negocio y cálculos físicos. Incluye el diseño de los `structs` (Nave, Evento, Misión), el uso de arreglos para el historial, y funciones con punteros para actualizar el estado y generar el reporte final.
+*   **`validaciones.h` / `validaciones.c`**: Funciones dedicadas al ingreso seguro de datos (enteros, flotantes) y manejo de errores, evitando que el programa se rompa ante entradas erróneas del usuario.
+
+---
+
+## 🛠️ Instrucciones de Compilación y Ejecución
+Para compilar y ejecutar este proyecto, es necesario tener instalado el compilador **GCC** en un entorno Linux, Mac o Windows (usando MinGW o WSL).
+
+1. Abrir una terminal en la carpeta raíz del repositorio.
+2. Compilar todos los archivos `.c` juntos. *(Nota: se utiliza `-lm` para enlazar la librería matemática `<math.h>` utilizada en los cálculos orbitales).*
+   ```bash
+   gcc main.c simulador.c validaciones.c -o simulador_artemis -lm
+
+3. Ejecutar el programa:
+
+    En Linux / Mac:
+   ./simulador_artemis
+
+   En Windows:
+   simulador_artemis.exe
