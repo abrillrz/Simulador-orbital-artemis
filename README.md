@@ -54,6 +54,7 @@ Para compilar y ejecutar este proyecto, es necesario tener instalado el compilad
 3. Ejecutar el programa:
 
     En Linux / Mac:
+    ```bash
    ./simulador_artemis
 
    En Windows:
