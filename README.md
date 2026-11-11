@@ -1,4 +1,4 @@
-# 🚀 Simulador de Misiones Artemis — Escenario 2: Órbita Terrestre Baja (LEO)
+# 🚀 Simulador de Misiones Artemis — Escenario 2: Órbita Terrestre Baja (LEO) 
 
 **Trabajo Final Integrador — Lenguaje C**
 *Universidad Tecnológica Nacional — Facultad Regional Resistencia*
