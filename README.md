@@ -131,7 +131,7 @@ De acuerdo con lo solicitado por la cátedra, declaramos el uso de IA generativa
 
 > ⚠️ **Completar antes de entregar:** esta sección debe reflejar lo que el grupo realmente usó. Agreguen otras herramientas si las hubo y confirmen que cada integrante revisó y comprendió el código.
 
-**Herramientas utilizadas:** Claude (Anthropic), DeepSeek y Qwen. *(Agregar otras si corresponde.)*
+**Herramientas utilizadas:** Claude (Anthropic), DeepSeek y Qwen. 
 
 **Tareas específicas:**
 - Explicación de los conceptos físicos del escenario (velocidad orbital, aceleración centrípeta, desviación lateral) antes de llevarlos a código.
