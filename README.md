@@ -50,6 +50,7 @@ Para compilar y ejecutar este proyecto, es necesario tener instalado el compilad
 2. Compilar todos los archivos `.c` juntos. *(Nota: se utiliza `-lm` para enlazar la librería matemática `<math.h>` utilizada en los cálculos orbitales).*
    ```bash
    gcc main.c simulador.c validaciones.c -o simulador_artemis -lm
+   ```
 
 3. Ejecutar el programa:
 
