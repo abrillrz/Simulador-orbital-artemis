@@ -1,10 +1,12 @@
 #ifndef VALIDACIONES_H
 #define VALIDACIONES_H
 
-/* Pide un entero en [min, max]. Repite hasta que sea valido. */
+/* Solicita un entero dentro del rango [min, max].
+   Vuelve a preguntar hasta que el valor ingresado sea válido. */
 int leer_entero(const char *mensaje, int min, int max);
 
-/* Pide un decimal en [min, max]. Repite hasta que sea valido. */
+/* Pide al usuario un real entre min y max (inclusive).
+   Insiste mientras la entrada no sea correcta. */
 double leer_decimal(const char *mensaje, double min, double max);
 
 /* Pide una opcion de menu entre min y max. */
