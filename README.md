@@ -96,34 +96,56 @@ Durante el trabajo, cada módulo se desarrolló y probó por separado antes de i
 
 ---
 
-## 🛠️ Instrucciones de Compilación y Ejecución
+## ## 🛠️ Instrucciones de Compilación y Ejecución
 
-**Requisito:** compilador GCC (Linux, macOS, o Windows con MinGW/WSL) y `make`.
+**Requisito:** compilador GCC (Linux, macOS o Windows con MinGW/WSL) y Make.
 
 ### Con Makefile (recomendado)
-```
+
+```bash
 make          # compila
 make run      # compila y ejecuta
 make clean    # borra los archivos generados
 ```
 
 ### Sin Makefile
-```
+
+```bash
 gcc -Wall -Wextra -pedantic -std=c99 main.c simulador.c validaciones.c -o simulador_artemis -lm
 ```
-`-lm` enlaza la librería matemática (`<math.h>`), necesaria para `sqrt` y `atan`.
+
+`-lm` enlaza la biblioteca matemática (`math.h`), necesaria para funciones como `sqrt` y `atan`.
 
 ### Ejecución
+
 **Linux / macOS**
-```
+
+```bash
 ./simulador_artemis
 ```
+
 **Windows**
-```
-simulador_artemis.exe
+
+```powershell
+.\simulador_artemis.exe
 ```
 
----
+### Ejecución automática en Windows (.bat)
+
+Para facilitar la compilación y ejecución del simulador, se incluye el archivo `ejecutar_artemis.bat`, que automatiza ambos procesos mediante los siguientes comandos:
+
+- `mingw32-make`: compila el proyecto utilizando el Makefile.
+- `simulador_artemis.exe`: ejecuta el programa una vez finalizada correctamente la compilación.
+
+Para utilizarlo, basta con abrir la terminal en la carpeta del proyecto y ejecutar:
+
+```powershell
+.\ejecutar_artemis.bat
+```
+
+**Requisito:** tener GCC y MinGW Make instalados y configurados en el PATH de Windows.
+
+De esta manera, no es necesario ingresar manualmente los comandos de compilación y ejecución cada vez que se utiliza el simulador.
 
 ## 🤖 Registro de Uso de Inteligencia Artificial
 
