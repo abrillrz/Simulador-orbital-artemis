@@ -51,9 +51,9 @@ int leer_entero(const char *mensaje, int min, int max)
         errno = 0;
         valor = strtol(buf, &fin, 10);
 
-        if (fin == buf) {                       /* no leyo ningun digito */
+        if (fin == buf) {                       /* Ningún dígito leído */
             mostrar_advertencia("Debe ingresar un numero entero (no letras).");
-        } else if (*fin != '\0') {              /* sobraron caracteres: "12abc" */
+        } else if (*fin != '\0') {             
             mostrar_advertencia("Entrada invalida: hay caracteres que no son digitos.");
         } else if (errno == ERANGE || valor < min || valor > max) {
             printf("  [!] El valor debe estar entre %d y %d.\n", min, max);
