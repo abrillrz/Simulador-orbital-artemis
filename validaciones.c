@@ -53,7 +53,7 @@ int leer_entero(const char *mensaje, int min, int max)
 
         if (fin == buf) {                       /* Ningún dígito leído */
             mostrar_advertencia("Debe ingresar un numero entero (no letras).");
-        } else if (*fin != '\0') {             
+        } else if (*fin != '\0') {             /* Caracteres de más: "12abc" */
             mostrar_advertencia("Entrada invalida: hay caracteres que no son digitos.");
         } else if (errno == ERANGE || valor < min || valor > max) {
             printf("  [!] El valor debe estar entre %d y %d.\n", min, max);
