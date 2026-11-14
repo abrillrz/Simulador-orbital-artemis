@@ -18,7 +18,7 @@ Cátedra: Algoritmos y Estructuras de Datos | Ingeniería en Sistemas de Informa
 - Gisela Mabel SOLOAGA
 - Pilar Agostina VARGAS
 
-> ⚠️ 🔗 **Video de presentación:** [PENDIENTE: pegar acá el enlace al video]
+> ⚠️ 🔗 **Video de presentación:** https://youtu.be/QHhu8BvIbSs
 
 ---
 
@@ -150,8 +150,6 @@ De esta manera, no es necesario ingresar manualmente los comandos de compilació
 ## 🤖 Registro de Uso de Inteligencia Artificial
 
 De acuerdo con lo solicitado por la cátedra, declaramos el uso de IA generativa como apoyo al aprendizaje y al desarrollo.
-
-> ⚠️ **Completar antes de entregar:** esta sección debe reflejar lo que el grupo realmente usó. Agreguen otras herramientas si las hubo y confirmen que cada integrante revisó y comprendió el código.
 
 **Herramientas utilizadas:** Claude (Anthropic), DeepSeek y Qwen. 
 
