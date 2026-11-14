@@ -18,7 +18,7 @@ Cátedra: Algoritmos y Estructuras de Datos | Ingeniería en Sistemas de Informa
 - Gisela Mabel SOLOAGA
 - Pilar Agostina VARGAS
 
-> ⚠️ 🔗 **Video de presentación:** https://youtu.be/QHhu8BvIbSs
+🔗 **Video de presentación:** https://youtu.be/QHhu8BvIbSs
 
 ---
 
